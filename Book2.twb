@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1018.1932                               -->
+<workbook original-version='18.1' source-build='2018.3.0 (20183.18.1018.1932)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='event (saix_schema.event) (saix)' inline='true' name='federated.1pt3oki0h5wm3b15njs2j1bh3m5u' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='52.90.191.172' name='postgres.00mjks80zlorpa15sltfe1vu7gfj'>
+            <connection authentication='username-password' class='postgres' dbname='saix' odbc-native-protocol='' one-time-sql='' port='5432' server='52.90.191.172' username='saix_master' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.00mjks80zlorpa15sltfe1vu7gfj' name='event' table='[saix_schema].[event]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>eventid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eventid]</local-name>
+            <parent-name>[event]</parent-name>
+            <remote-alias>eventid</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>companyid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[companyid]</local-name>
+            <parent-name>[event]</parent-name>
+            <remote-alias>companyid</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sourceapplication</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sourceapplication]</local-name>
+            <parent-name>[event]</parent-name>
+            <remote-alias>sourceapplication</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>eventdescription</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[eventdescription]</local-name>
+            <parent-name>[event]</parent-name>
+            <remote-alias>eventdescription</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>receiveddate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[receiveddate]</local-name>
+            <parent-name>[event]</parent-name>
+            <remote-alias>receiveddate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[event]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>32</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' datatype='integer' name='[Eventid (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='3' formula='[eventid]' peg='0' size='6648' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Number of Records (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Number of Records]' peg='0' size='1' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Companyid' datatype='integer' name='[companyid]' role='measure' type='quantitative' />
+      <column caption='Eventdescription' datatype='string' name='[eventdescription]' role='dimension' type='nominal' />
+      <column caption='Eventid' datatype='integer' name='[eventid]' role='measure' type='quantitative' />
+      <column caption='Receiveddate' datatype='datetime' name='[receiveddate]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Sourceapplication' datatype='integer' name='[sourceapplication]' role='dimension' type='ordinal' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+      <column-instance column='[sourceapplication]' derivation='None' name='[none:sourceapplication:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.487406' measure-ordering='alphabetic' measure-percentage='0.512594' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:sourceapplication:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>5</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Event table analytics</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='event (saix_schema.event) (saix)' name='federated.1pt3oki0h5wm3b15njs2j1bh3m5u' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1pt3oki0h5wm3b15njs2j1bh3m5u'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[sourceapplication]' derivation='None' name='[none:sourceapplication:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' caption='Sourceapplication' datatype='integer' name='[sourceapplication]' role='dimension' type='ordinal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[sum:Number of Records:qk]' included-values='in-range-or-null'>
+            <min>72753</min>
+            <max>787657</max>
+          </filter>
+          <slices>
+            <column>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[sum:Number of Records:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:sourceapplication:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:state:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[sum:Number of Records:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:state:nk]' type='highlighter' />
+            <card pane-specification-id='0' param='[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:sourceapplication:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight field='[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:state:nk]' pattern='created' type='highlight'>
+          <color-one-way>
+            <field>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[cnt:eventid:qk]</field>
+            <field>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:Eventid (bin):qk]</field>
+            <field>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:Number of Records (bin):qk]</field>
+            <field>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[none:sourceapplication:ok]</field>
+            <field>[federated.1pt3oki0h5wm3b15njs2j1bh3m5u].[sum:Number of Records:qk]</field>
+          </color-one-way>
+          <bucket-selection>
+            <bucket>&quot;created&quot;</bucket>
+          </bucket-selection>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3D8DBD9C-2BD4-48E8-8E05-AF307ABE7BB2}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

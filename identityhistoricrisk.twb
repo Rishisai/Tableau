@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1018.1932                               -->
+<workbook original-version='18.1' source-build='2018.3.0 (20183.18.1018.1932)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='identityhistoricriskscore (saix_schema.identityhistoricriskscore) (saix)' inline='true' name='federated.1qonzpe0mcufl21fy6i6j1wqu2p9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='52.90.191.172' name='postgres.1jvpb0m0qkz7mj182zy4e038fxh7'>
+            <connection authentication='username-password' class='postgres' dbname='saix' odbc-native-protocol='' one-time-sql='' port='5432' server='52.90.191.172' username='saix_master' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.1jvpb0m0qkz7mj182zy4e038fxh7' name='identityhistoricriskscore' table='[saix_schema].[identityhistoricriskscore]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>identityid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[identityid]</local-name>
+            <parent-name>[identityhistoricriskscore]</parent-name>
+            <remote-alias>identityid</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>riskscore</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[riskscore]</local-name>
+            <parent-name>[identityhistoricriskscore]</parent-name>
+            <remote-alias>riskscore</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scoredate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[scoredate]</local-name>
+            <parent-name>[identityhistoricriskscore]</parent-name>
+            <remote-alias>scoredate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>updatedby</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[updatedby]</local-name>
+            <parent-name>[identityhistoricriskscore]</parent-name>
+            <remote-alias>updatedby</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>55</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>updateddate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[updateddate]</local-name>
+            <parent-name>[identityhistoricriskscore]</parent-name>
+            <remote-alias>updateddate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='Identityid' datatype='integer' name='[identityid]' role='dimension' type='ordinal' />
+      <column aggregation='CountD' caption='Riskscore' datatype='integer' datatype-customized='true' name='[riskscore]' role='measure' type='quantitative' />
+      <column caption='Scoredate' datatype='datetime' name='[scoredate]' role='dimension' type='ordinal' />
+      <column caption='Updatedby' datatype='string' name='[updatedby]' role='dimension' type='nominal' />
+      <column caption='Updateddate' datatype='datetime' name='[updateddate]' role='dimension' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='Day' name='[dy:scoredate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='Hour' name='[hr:scoredate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='Month' name='[mn:scoredate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[identityid]' derivation='None' name='[none:identityid:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[riskscore]' derivation='None' name='[none:riskscore:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='None' name='[none:scoredate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='Quarter' name='[qr:scoredate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='Day-Trunc' name='[tdy:scoredate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[scoredate]' derivation='Year' name='[yr:scoredate:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Exclusions (DAY(Scoredate),HOUR(Scoredate),Identityid,MONTH(Scoredate),QUARTER(Scoredate),Riskscore,YEAR(Scoredate))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[dy:scoredate:ok]' />
+          <groupfilter function='level-members' level='[hr:scoredate:ok]' />
+          <groupfilter function='level-members' level='[none:identityid:ok]' />
+          <groupfilter function='level-members' level='[mn:scoredate:ok]' />
+          <groupfilter function='level-members' level='[qr:scoredate:ok]' />
+          <groupfilter function='level-members' level='[none:riskscore:ok]' />
+          <groupfilter function='level-members' level='[yr:scoredate:ok]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.552897' measure-ordering='alphabetic' measure-percentage='0.447103' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:scoredate:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>#2018-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>#2018-11-08 07:15:23.500#</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[tdy:scoredate:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>#2018-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>#2018-11-09 00:00:00#</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>#2018-11-08 00:00:00#</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:riskscore:ok]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>5</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Identity historic risk score</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='identityhistoricriskscore (saix_schema.identityhistoricriskscore) (saix)' name='federated.1qonzpe0mcufl21fy6i6j1wqu2p9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qonzpe0mcufl21fy6i6j1wqu2p9'>
+            <column aggregation='Sum' caption='Identityid' datatype='integer' name='[identityid]' role='dimension' type='ordinal' />
+            <column-instance column='[identityid]' derivation='None' name='[none:identityid:ok]' pivot='key' type='ordinal' />
+            <column aggregation='CountD' caption='Riskscore' datatype='integer' datatype-customized='true' name='[riskscore]' role='measure' type='quantitative' />
+            <column caption='Scoredate' datatype='datetime' name='[scoredate]' role='dimension' type='ordinal' />
+            <column-instance column='[riskscore]' derivation='Sum' name='[sum:riskscore:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[scoredate]' derivation='Hour-Trunc' name='[thr:scoredate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:identityid:ok]'>
+            <groupfilter function='level-members' level='[none:identityid:ok]' />
+          </filter>
+          <slices>
+            <column>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:identityid:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[sum:riskscore:qk]' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[sum:riskscore:qk]' />
+              <lod column='[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:identityid:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[sum:riskscore:qk]</rows>
+        <cols>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[thr:scoredate:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:identityid:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[sum:riskscore:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[dy:scoredate:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[hr:scoredate:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[mn:scoredate:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:riskscore:nk]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:riskscore:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[none:scoredate:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[qr:scoredate:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[sum:riskscore:qk]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[tdy:scoredate:ok]</field>
+            <field>[federated.1qonzpe0mcufl21fy6i6j1wqu2p9].[yr:scoredate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A14129CB-5D15-4F3C-AB96-C219A45226DC}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAASLElEQVR4nO3daXAc9ZnH8W/39Ny6T1uXbdnyKeP7AAzmZr0mxBwhZDccMaFCYNlUUgFe
+      bLG7leyLbLJstiCVBYosmDOBDSHBSzgTDDbG+MTCFsKyLdm6rFsz0hyame59IULZlkw0kmZ6
+      Zvr5vLJH6p5n7P7NdP+nn/9fMQzDQAiL0iaykWRGZIq4AnD6ga/rOrquoyjKlBclRLLEFYDo
+      YDf7j7RRUVHF9OI8AGw2W0IKEyIZ1Hh+WcsqIM+hEwhFElWPEEkV9zWAM7uIqqoSkOsAkQGU
+      iY4CGYaBrutyCiTSWlynQEJkGgmAsDQJgLA0CYCwNAmAsDQJgLA0CYCwNAmAsDQJgLA0CYCw
+      NAmAsDQJgLA0CYCwtLgCYBgG0WgsUbUIkXRx9QN0tjTR3NZN7cqVuD+PzoTupjYMwh1dOKeX
+      xL+tEFMovp5gRcWhGkRi4GSkJ3gijGiU+gd/QvV9d5NVUz2hfQgxFeJqiIlFw7Sd6qOifBpM
+      siEm1NFJ/QM/YtFDP8JRVDChfQgxWaZ2hPk+PkTz41tY9PN/Q3U4JrwfISbK1FGgnCWLKL7q
+      Eo7+9GGZa0iYwvRh0NJrN6Dl5dD+0itmlyIsyPQAKIrCjO9sZmDfAfp27Ta7HGExpgcAQLVr
+      1PzTfbRueY5g8wmzyxEWkhIBANCys6i+7/sc/elDRH0+s8sRFpEyAQDwzJpBxe23cOw//hM9
+      IrPPicRLqQAA5K1aSc7SJZx84lcyMiQSLuUCAFC66asYkWG633zT7FJEhkvJACiqStVdd9H3
+      3jb8Bw+aXY7IYCkZAADV4WDW/Q/QuuVJwh3tZpcjMlTKBgDAnptL1d330PTznxELBMwuR2Sg
+      lA4AgGf2HEo33cDJRx/BiEkvgphaKR8AgNy1F+CqrKLjpedlZEhMqbQIgKIolN7wdSKdp+jf
+      sc3sckQGSYsAwMjIUPmdd9P71msEGhvMLkdkiLgCEItGCYVC6CadhdjcHirv/SHtTz9OpK/X
+      nCJERomrISYwOMDhww3UrliFUx1ZKlVVk/8hEvjsMJ0vP0/VDx5EdTiT/vwic8QVAMOIcfJk
+      O5WV5V+sE2xGAAB8O99l8PBByjbfC7JWsZig+AKgR4nEFBx2m+mL5BmGQedLW7B5vBRd8zVT
+      ahDpL663b0XVcNhTY1VIRVEoueEWQs1H8O/fZXY5Ik2lzSjQWBSbjem330vPH18i1NJkdjki
+      DaV1AABs3mzKvv0DOl94lKh/wOxyRJpJ+wAAOErKKLzmZk49/V8YUWmkEeOXEQEA8C5Yinfx
+      arp+K400YvwyJgAAueuuBgx8779mdikiTWRUABRVpej6Owgc3kvwSJ3Z5Yg0kFEBAFDtDkr+
+      /nv0vvYskS5ppBFfLuMCAGDLzqX4prvpfukR9NCQ2eWIFJaRAQBwTJ9BzsXX0v3iIxixqNnl
+      iBSVsQEA8NauxVk1l/63XpCRITGmjA4AQM7FXyXm62Fo35/MLkWkoIwPgKLaKNj0XQJ12wmf
+      lEYacaaMDwCA6nBScN09DLz+JNGBLrPLESnEEgEA0HKLyNv4bfpeeQQ9HDS7HJEiLBMAAEfZ
+      HLzLLmPgtccwJrjAn8gscQVAj0U4dryZdD503IvXY8svYejDV2RkSMTXEdZyrIGBiMa8mmoU
+      Y6QlUknHdkRdx7f1YVwLL8QxZ5XZ1QgTxbVOsDc7h96WVvzDBnnOkQ8Ps1oiJytv4930v/wT
+      7AXTsZfMNLscYRJTl0k1W7S3Dd9rD5O76QFsWflmlyNMYKmL4LNpBWVkrb+FwTd/iREdNrsc
+      YQJLBwDAUbkIx+yVDL77PxhGOl/ei4mwfAAAXOddhep0E657w+xSRJJJABiZYsVz/t8ROVlH
+      pHm/2eWIJJIAfE7R7Hgv/y7BfS8T62sxuxyRJBKA06iubLwXf5vAtsfQQ36zyxFJIAE4i61w
+      Bq5lmwhufxwjJlOsZDoJwBjsM1aglc4jvPc3crtEhpMAnIOj9m8xIgGije+aXYpIIAnAOSiK
+      imvNbUSObSfWcdjsckSCSAC+hKI5cV30DwwfeAF9SBppMpEE4K9QPfk4Vt3O8Ae/wIjIWsWZ
+      RgIwDrbC2WjzNhDZ+6TcLpFhJADjZKtcg5I9jdih38rIUAaRAIyToihoCzZhBDrRW3aaXY6Y
+      ImMGoL+rlYbGE2nd+pgIimpDW/Yt9OPvoPc2ml2OmAJjBqCpuZ63tr5D+KzHo8FBPm04SiwJ
+      haUqxe5BW3EX+qFnMUJ9ZpcjJmnMlkiHlssV19TgOOvxgZ5uYpoGuoH+eU+wJc+HnfkY875G
+      bO8jKNnlZlczOaoGMzdguArMrsQUYwbA43ay6+M65syZccbjrpxcokeOEtRn4LWld0/wpJUs
+      wsguhTQfGjUCXcQOP4O26vsoivUuCccMQG+/nyy7SvSsX/Dm5LNkxUoArPjGfzbFXQRus6uY
+      HCWnilhXHbG2XWjl55tdTtKNGXnV7qAgNxs5xq1Bm3cjkWN/xBgeNLuUpBszAEWFBbR29Yy6
+      BhCZSXFkoVVvIPzp/1rumm7MAAwN+vC6PMjd8Nahla0hGugi1nfU7FKSalQADMPA6XBgczjl
+      WzILURQVd+2tDB1+AUO3zoo6o47xoL+XE+1d+Hw+0nDSQzEJtqxStKJFBI+9ZXYpSTMqAJ6c
+      QrwOG/7ebjkFsiBPzTUEW3cRC/SYXUpSjHEKFEazuamaPSe+iUNFRlBsDrIW3MjAJ89b4oJ4
+      VABCAwN0+/1ke70yDGpRzpJasDkJtu8zu5SEGxUAf/8AMSVC+6keuQawsLyltzPw2atEA91m
+      l5JQowJgd7gonlbF+vWr5RTIwlSbg7xFN9F98LmMbgIaFYCcoiL6Th5j2/Zdcju0xbmLF6LY
+      XAy1Z+50kaMCYHO48Xg8qJGwjAIJChffTHf974hFMnNhwTEXyAgH/LT3+JlZWXbODTNhgQwx
+      Pn3H/kzY307ped9IzyWxvsSYX/Y2HP6E443HkSUjBEDerPUE+o4TGjhpdilTbswAhIaH8Xo9
+      MgokgJHbJKYvu5XW/Vsw9MzqBxwzALlZXtraO+QiWHzBnVuJu2AOPce3mV3KlBozAPmFxRjh
+      0KgAGIZBfX19EsoSqWjaous41fg2kWC/2aVMmVFD/WFfD6FojLDmwnnWz3raT9DZ62N2NIZN
+      wbo9wZalMW3h9TTtf5ZZq+8yu5gpMSoA/p5OduxrpKayjDBndvxl5RdREYyhKAqqOnKFIKNA
+      1lJYuZLu5vcZ7P6UvGm1ZpczaaOHQQ0D3TAwDONLD24ZBrWucKCX+vceYvEV/4JNS+++wdHX
+      AIqCqqpyYItzcnoKKJp5ISfrXzW7lEmTpi8xIWVzr6an7SABX7vZpUyKBEBMiKramLPiFhr2
+      bEnrm+UkAGLCcovm4PQW09H8odmlTJgEQExKzdKvc+zQq0TCQ2aXMiESADEpdmcWsxZew6cH
+      fp2W3wlJAMSkTZ95PkP+Tvq702/KeAmAmDRFUald/S0O7n4GPc3mFJIAiCmRlTONkvIlNNa/
+      YXYpcZEAiCkzd9FXOHFsB4Gh9GmklwCIKWPTHCxe8Q327Xo6bS6IJQBiSpWWLUa12WlrSY9G
+      egmAmHLLV9/K/r2/IRo9e5W51CMBEFPO5c6lZv4V7N/3YsqfCkkARELMnXc5nZ2N9Pe3ml3K
+      l5IAiIRQFJW1529mx44n0FO4kT6uAAT8/RyqO8Rw+t78J5KosHAGhUXVfHbkPbNLOae4pv90
+      ezxEhsPohsXXCRbjtmzpDbyy9Z+pqFiKy5ltdjmjxBWAQb8fp9sFjHSNgfQEiy+naRprVt7M
+      B7ue4cpL7025meXiOgXKzitkwcKFuOSYF3GYOWMl4UiI1vbUm1JHLoJFwimKwiUXbubdnU8R
+      i6XWlMsSAJEU2VlFzJ+zjo8O/N7sUs4gARBJs3zxRo407aFvoMPsUr4gARBJo6o2rlh3B2++
+      /6uUGT2UAIikKiutIctbwOHGD8wuBZAACBNcdsEtbN/7MqEUaKSXAIikczuzuGD5Jt7+0Py1
+      iCUAwhS1Nevo6mujtdPcRnoJgDCFoih85ZI72fr+U8RMvFlOAiBMU5RXRnV5LTsP/tG0GiQA
+      wlSXrrqB3fV/ZmCw15TnlwAIU9k1BxsvvI3fbTPnuwEJgDDd3KrzUBQb9c3Jb6SXAIiUcN36
+      zfxh+zMMR5O7OrUEQKSEHG8eFyy+mv/bmdxJdiUAImWsW3wVja31nOprS9pzxhWA4GA/B/bs
+      JZC6Pc4ijamqyjcu/w7PvPXLpH0KxNUSCSrFFZW41JEVIqUnWEy1afkVlBfP4r2Db3PhoksT
+      /nxxBSAWjTDo6ydaXIJdeoJFgtxw0Tf58XP3s2LeWrJciW2kH71O8DjJOsEikfY1fsSez3Zy
+      54Z/TGgjvVwEi5S0bPYq/EE/Da2JbaSXAIiUpCgKt135Hba88wTRWOJWnZEAiJRVlFPM2vnr
+      +MNHv0vYc0gARErbuPJaPmzYSedAZ0L2LwEQKU2zaWy+4k4ee+O/E7J/CYBIefMrFpCfVcCO
+      T3dM+b4lACIt3Hbp7Ty//dcEwoEp3a8EQKSFbHc216+5nqfefWZK9ysBEGnjstpLaOpq5kj7
+      1DXSSwBE2lAUhXs33M0v3nh8yhrpJQAirVQUlLNk5nn8Ye/rk96XYRgSAJFeFEXhm+tu4tX9
+      r9Pjn1gjfTg6zHsNH/LDF38sN8OJ9LT72H5e3fcmP7rxgXFvc8rXze/3v8n2Ix+xatYSrlv+
+      NxIAkZ4Mw+DB3/47X1l2FWtmLz/n7+m6zq7jB3hp91aGo8Ncu+wqLqpZjdvhAuR2aJHGegf7
+      +N5z/8oTm3+G0+4442dd/h62fvwn/lT/AYsr5nHTqo1UFZajKmee9UsARFp78aOtdPl7uOfy
+      2057t3+NoXCAry67kkvnn//Fu/1Y4gpAOOCnqa2beXNmSQBEStB1nTuevJ+1s5ezrWEXteXz
+      uHnNNcwsqhj1bj+WuD8B2tramD59+hc9wam27KWwnhO9bexuqmND7cV4HO64to0rAMHBfppb
+      TzGzuganpsgngEh7cg0gLE2+CBOWJgEQliYBEJYmARCWJgEQliYBEJYmARCWJgEQliYBEJYm
+      ARCWJgEQliYBEJYmARCWFlcADD1Ce0diZukVwgxxBaCtpRU96MMXSVQ5QiRXXAGwaypdfX7s
+      cuIkMkRcDTGGYYzMpqWq0hAjMsKEOsL+cvD/ZVPDMM7oDT7772c/dvpTnmu7v/x5rO3O3ub0
+      xxK53dm/c/rP49kuFV/LX3tsrP+jeB5L9Ha6rqN+vnRvPPuYcEvkZJz+SZLOTv9HT1eZ8Bom
+      czyZEgAhUkVcK8VPRiQ0yKG6Okpmn4cW6MKnO/C1N1M9t5qGpl7WLFuQrFImzIiG2HegjvyS
+      SqblanzW0ouHIfKnzeDThkYuumC12SWOS/0nH2PYvSycN5vdu3ZRPbOKDl8Yf+dJlq5ehyvF
+      RzkioSGONLeT7YSugTDLlyyksf4TSnJyORlV6W46yvr168e1r6S9UrvLS0FpOdMLPHR0ddPT
+      2UnJtGI+O9pGSb4nWWVMiqEb2DQNw4jR1trOoK8PZ24RbU3HKCgqNLu8cSspKcHn8xEc6CQU
+      Hqa1ewhbbAjVmW12aeNid3nJy/YQQyM3242hR2hpaqKtP4qiD6LF8TqSdgpkGAahcBi300ko
+      HP7inC0SiWCzabjd556+LlUYhkF7ywlyi8uwEUNTFUJRHfQYNpsNtzu+SZnM0tPZjubJw21X
+      0OxOhgb9I+fPqorb5UZVU3uys3DAT9PJkQnaAqEopQVewoadaMAPNhuoNrI84/u/kGsAYWmp
+      fbInRIJJAETaa2lqZDAUndC2cgokEmb79u1EwiFqFy0gprnxOu1EQwF8w1BZmkfD0Ra6jh/E
+      Wb6YvuY6ZsxfhkcJ480twB+MkuM0iOgqgbCOV4uw55MjVJeVQmSAIc8s8lUf5dXz+eTAXvwx
+      P8NBO2sWzWZIV/G6vBjRAKd6hyjw2uj1BfBkO9nzwUGu3HglLSdamT6tIHnDoMJ6ujtaGAgZ
+      GKoGRhCvO5f+1uNkLViPv3UP/mCQDqWQ6xdW05FtsKduL9nectBbQFUIB4PYiWJ4i9D0MF78
+      HD5wAsOdw3lrq3n3jT2scxSgKApzF9bw4pNbcRJFj0UJ9pxgIJqFOzsfb44Dh6FDW5CCghxe
+      fOJRsqrmcqjBxv8DABM+ViDywqYAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,874 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1018.1932                               -->
+<workbook original-version='18.1' source-build='2018.3.0 (20183.18.1018.1932)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <BasicButtonObject />
+    <IntuitiveSorting />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='appentitlement (saix_schema.appentitlement) (saix)' inline='true' name='federated.0dvnm521ogcchf0zl3gp805ru385' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='52.90.191.172' name='postgres.1geridl1w6clnx1epznqz1mr3uog'>
+            <connection authentication='username-password' class='postgres' dbname='saix' odbc-native-protocol='' one-time-sql='' port='5432' server='52.90.191.172' username='saix_master' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.1geridl1w6clnx1epznqz1mr3uog' name='appentitlement' table='[saix_schema].[appentitlement]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>entitlementid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[entitlementid]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>entitlementid</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>applicationid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[applicationid]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>applicationid</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>128</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>128</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>64</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usage</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[usage]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>usage</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>64</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>activationdate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[activationdate]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>activationdate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deactivationdate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[deactivationdate]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>deactivationdate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>riskscore</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[riskscore]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>riskscore</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[availability]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>availability</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>owner</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[owner]</local-name>
+            <parent-name>[appentitlement]</parent-name>
+            <remote-alias>owner</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>128</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Activationdate' datatype='datetime' name='[activationdate]' role='dimension' type='ordinal' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Applicationid' datatype='integer' name='[applicationid]' role='dimension' type='ordinal' />
+      <column caption='Availability' datatype='string' name='[availability]' role='dimension' type='nominal' />
+      <column caption='Deactivationdate' datatype='datetime' name='[deactivationdate]' role='dimension' type='ordinal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Entitlementid' datatype='integer' name='[entitlementid]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Owner' datatype='string' name='[owner]' role='dimension' type='nominal' />
+      <column caption='Riskscore' datatype='integer' datatype-customized='true' name='[riskscore]' role='measure' type='quantitative' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Usage' datatype='string' name='[usage]' role='dimension' type='nominal' />
+      <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[riskscore]' derivation='None' name='[none:riskscore:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Exclusions (Name,Riskscore)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:name:nk]' />
+          <groupfilter function='level-members' level='[none:riskscore:ok]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.513854' measure-ordering='alphabetic' measure-percentage='0.486146' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:riskscore:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>7</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Entitlement score</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='appentitlement (saix_schema.appentitlement) (saix)' name='federated.0dvnm521ogcchf0zl3gp805ru385' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dvnm521ogcchf0zl3gp805ru385'>
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column caption='Riskscore' datatype='integer' datatype-customized='true' name='[riskscore]' role='measure' type='quantitative' />
+            <column-instance column='[riskscore]' derivation='Sum' name='[sum:riskscore:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' included-values='in-range-or-null'>
+            <min>2</min>
+            <max>10</max>
+          </filter>
+          <columns>
+            <shelf-sort direction='DESC' measure-to-sort-by='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]'>
+              <dimensions-to-sort>
+                <dimension>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</dimension>
+              </dimensions-to-sort>
+            </shelf-sort>
+          </columns>
+          <slices>
+            <column>[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' palette='red_green_gold_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]</rows>
+        <cols>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='appentitlement (saix_schema.appentitlement) (saix)' name='federated.0dvnm521ogcchf0zl3gp805ru385' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dvnm521ogcchf0zl3gp805ru385'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Activationdate' datatype='datetime' name='[activationdate]' role='dimension' type='ordinal' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Applicationid' datatype='integer' name='[applicationid]' role='dimension' type='ordinal' />
+            <column caption='Availability' datatype='string' name='[availability]' role='dimension' type='nominal' />
+            <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+            <column caption='Entitlementid' datatype='integer' name='[entitlementid]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[applicationid]' derivation='None' name='[none:applicationid:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[availability]' derivation='None' name='[none:availability:nk]' pivot='key' type='nominal' />
+            <column-instance column='[description]' derivation='None' name='[none:description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[owner]' derivation='None' name='[none:owner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[usage]' derivation='None' name='[none:usage:nk]' pivot='key' type='nominal' />
+            <column caption='Owner' datatype='string' name='[owner]' role='dimension' type='nominal' />
+            <column caption='Riskscore' datatype='integer' datatype-customized='true' name='[riskscore]' role='measure' type='quantitative' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[entitlementid]' derivation='Sum' name='[sum:entitlementid:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[riskscore]' derivation='Sum' name='[sum:riskscore:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[activationdate]' derivation='Year-Trunc' name='[tyr:activationdate:ok]' pivot='key' type='ordinal' />
+            <column caption='Usage' datatype='string' name='[usage]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:name:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:name:nk]' member='&quot;High&quot;' />
+                <groupfilter function='member' level='[none:name:nk]' member='&quot;Low&quot;' />
+                <groupfilter function='member' level='[none:name:nk]' member='&quot;Medium&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:age:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:entitlementid:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>([federated.0dvnm521ogcchf0zl3gp805ru385].[none:applicationid:ok] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:availability:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:description:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:owner:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:status:nk] / [federated.0dvnm521ogcchf0zl3gp805ru385].[none:usage:nk]))))))</rows>
+        <cols>([federated.0dvnm521ogcchf0zl3gp805ru385].[tyr:activationdate:ok] * ([federated.0dvnm521ogcchf0zl3gp805ru385].[sum:Number of Records:qk] + ([federated.0dvnm521ogcchf0zl3gp805ru385].[sum:age:qk] + ([federated.0dvnm521ogcchf0zl3gp805ru385].[sum:entitlementid:qk] + [federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]))))</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='appentitlement (saix_schema.appentitlement) (saix)' name='federated.0dvnm521ogcchf0zl3gp805ru385' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dvnm521ogcchf0zl3gp805ru385'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Activationdate' datatype='datetime' name='[activationdate]' role='dimension' type='ordinal' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Applicationid' datatype='integer' name='[applicationid]' role='dimension' type='ordinal' />
+            <column caption='Availability' datatype='string' name='[availability]' role='dimension' type='nominal' />
+            <column caption='Deactivationdate' datatype='datetime' name='[deactivationdate]' role='dimension' type='ordinal' />
+            <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+            <column caption='Entitlementid' datatype='integer' name='[entitlementid]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[applicationid]' derivation='None' name='[none:applicationid:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[availability]' derivation='None' name='[none:availability:nk]' pivot='key' type='nominal' />
+            <column-instance column='[description]' derivation='None' name='[none:description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[owner]' derivation='None' name='[none:owner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[usage]' derivation='None' name='[none:usage:nk]' pivot='key' type='nominal' />
+            <column caption='Owner' datatype='string' name='[owner]' role='dimension' type='nominal' />
+            <column caption='Riskscore' datatype='integer' datatype-customized='true' name='[riskscore]' role='measure' type='quantitative' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[entitlementid]' derivation='Sum' name='[sum:entitlementid:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[riskscore]' derivation='Sum' name='[sum:riskscore:qk]' pivot='key' type='quantitative' />
+            <column caption='Usage' datatype='string' name='[usage]' role='dimension' type='nominal' />
+            <column-instance column='[activationdate]' derivation='Year' name='[yr:activationdate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[deactivationdate]' derivation='Year' name='[yr:deactivationdate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:name:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:name:nk]' member='&quot;Excessive&quot;' />
+                <groupfilter function='member' level='[none:name:nk]' member='&quot;High&quot;' />
+                <groupfilter function='member' level='[none:name:nk]' member='&quot;Medium&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:age:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:entitlementid:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>([federated.0dvnm521ogcchf0zl3gp805ru385].[none:availability:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:description:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:owner:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:usage:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:status:nk] / ([federated.0dvnm521ogcchf0zl3gp805ru385].[none:applicationid:ok] / [federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]))))))</rows>
+        <cols>(([federated.0dvnm521ogcchf0zl3gp805ru385].[yr:activationdate:ok] / [federated.0dvnm521ogcchf0zl3gp805ru385].[yr:deactivationdate:ok]) * ([federated.0dvnm521ogcchf0zl3gp805ru385].[sum:Number of Records:qk] + ([federated.0dvnm521ogcchf0zl3gp805ru385].[sum:age:qk] + ([federated.0dvnm521ogcchf0zl3gp805ru385].[sum:entitlementid:qk] + [federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]))))</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98230' id='5' param='horz' type='layout-flow' w='99064' x='468' y='885'>
+            <zone h='98230' id='3' type='layout-basic' w='89702' x='468' y='885'>
+              <zone h='98230' id='1' name='Sheet 1' w='89702' x='468' y='885'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98230' id='4' is-fixed='true' param='vert' type='layout-flow' w='9362' x='90170' y='885'>
+              <zone h='7190' id='6' name='Sheet 1' pane-specification-id='0' param='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' type='color' w='9362' x='90170' y='885'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='6000' id='7' type='dashboard-object' w='13900' x='9000' y='10125'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{BD743C9A-746F-4986-AC35-E325464E715C}&quot;'>
+            <button-visual-state />
+          </button>
+        </zone>
+        <zone h='6375' id='8' type='dashboard-object' w='15900' x='26200' y='10125'>
+          <button action=''>
+            <button-visual-state />
+          </button>
+        </zone>
+        <zone h='6500' id='9' type='dashboard-object' w='16400' x='45700' y='10125'>
+          <button action=''>
+            <button-visual-state />
+          </button>
+        </zone>
+        <zone h='6500' id='10' type='dashboard-object' w='16400' x='65200' y='10000'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{DB134836-9308-4A3B-9347-A0DA079F2687}&quot;'>
+            <button-visual-state />
+          </button>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0dvnm521ogcchf0zl3gp805ru385].[sum:riskscore:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[:Measure Names]</field>
+            <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[cnt:riskscore:qk]</field>
+            <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</field>
+            <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:riskscore:nk]</field>
+            <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:riskscore:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CE43E1B5-E43A-40A4-964A-3C4F3FAAC876}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B0D6219A-2754-4FA4-A3C5-326178E34258}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <fields>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</field>
+                </fields>
+                <multibucket>
+                  <bucket>&quot;Medium&quot;</bucket>
+                </multibucket>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:applicationid:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BD743C9A-746F-4986-AC35-E325464E715C}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <fields>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:availability:nk]</field>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:description:nk]</field>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:owner:nk]</field>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:usage:nk]</field>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:status:nk]</field>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:applicationid:ok]</field>
+                  <field>[federated.0dvnm521ogcchf0zl3gp805ru385].[none:name:nk]</field>
+                </fields>
+                <multibucket>
+                  <bucket>&quot;test&quot;</bucket>
+                  <bucket>&quot;test&quot;</bucket>
+                  <bucket>&quot;test&quot;</bucket>
+                  <bucket>&quot;test&quot;</bucket>
+                  <bucket>&quot;test&#10;&quot;</bucket>
+                  <bucket>2</bucket>
+                  <bucket>&quot;High&quot;</bucket>
+                </multibucket>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+      </viewpoint>
+      <simple-id uuid='{DB134836-9308-4A3B-9347-A0DA079F2687}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAKkElEQVR4nO3dzW8Tdx7H8c+Mxw8xDrFJSJzYBpomoSwsD2ELC5VY7S5dqf0DqNTL3iqt
+      OHdPvbWn/gPVXvbQPVdaoVWR9lCt2iICNDyEJiVuSEhCSJ0YYsexHcf2/PZAG5HWoZnYnrH9
+      /bxuITD+ycx7PGP7a2tKKQUioXSnF0DkJAZAojEAEo0BkGgMgETbEsD3393H6OgoJqfntvyl
+      dDoNAMimksgWyps/379/f1c3WsimsV7a1T8lqinjxR9mFxK4ePEiACA+MYZMvoDg/ghufflf
+      DP72dbyyvx0lU8fnV67gwp/+gnQ6jWIujdGx7xCOvoJiZgmr2TwKRUBBw7nfn8LdW9/A29GN
+      Lh8w+3QFXm8AhYV7WPa+ij+eOwWPmcWtO+PoiRxEu7GB6YUEXjt8BJMT38If7EbvXjd+WM0h
+      HA5jZvIBAp29eG3goCN3FrWeLY8A5UIWo6OjmHr0GImnaZwe/h0W56YRPTSA0yeOYuXJHMpt
+      IQwMDKL/QB8A4NqXXwKGgZGR60g8TWN4+DRyuTV0lAsY/3YEs6smbt0YQWJ+AQMnh5FZWUZf
+      Xx+OnjgNv0dHfjWJdLYAwzAw8f0jnH39DGbH72Lg1BnkE4/x+PE0ym1dSE7ewVIBGBm57sgd
+      Ra2p4jVA2TShadqPP2lo92q4cWd88/frmWeYnnsCAIgeiMEsmTh+4sQvthPsiWKPS+HY8ePQ
+      oUHXn2/T3x7ExO0R5DZM6J52dHb4MT4+Dr8B3Lz1DQLBEG7fGMHyegk+3UB3Txf290Xh1RRO
+      VLgdot3S+EowScZngUg0BkCiMQASjQGQaAyARGMAJBoDINGMX/8rlSmlYJom+DICNTMLASis
+      rqTgDwaRSaUQCoWg6zpM04TL5arfConqaOenQArIJZPIo4xkMlXHJRHZx9I1QDr9DEuJJJLL
+      i3iWztZrTUS2qeq9QD9dB/AUiJrVri+CG41SCsVi0ellAADcbvcL76alRtYSAUxNTeGjjz7C
+      xMSE489K6bqOkydP4oMPPkAsFnN0LS8zPT2Nq1evYmlpyemlbDIMA8eOHcNbb70Fn89ny202
+      /SlQPp/HpUuXsLi46NgaKhkcHMSnn34Kt9vt9FJ+IZlM4pNPPmmYR8wXKaVw9OhRvPPOO7Y8
+      ijb9C2FjY2MNt/MDwMOHDzEzM+P0MioaGxtryJ0fADRNQzweRzZrz5MsTR9AoVCoyXbC4TBi
+      sVjNTqFM00Q+n6/JtmptfX29JttRSqGtra3mR+pSqVSz/9df0/QB1Eomk8Hly5cxNDTk+HVE
+      Mzl06BDefPNN6Hpz7krNueo6yGaz+PDDD/H+++8jGo06vZymoGkaJiYmkEgk8Pbbbzfl0+EM
+      4EdKKbzxxhuYmppqyGuKRpZIJBAKhRrygv/XtMTToLUwNDSEoaEhfPzxx04vpWkopRAOh3Hh
+      wgV89tlnNbu2sBMD+NHk5CTi8XhNL+ia9bzYCsMwcOXKlabc+YEWCCASiWy+K7Uatd5Z29ra
+      EIlEarrNWqnVubqmaVhYWKjJtl7kcrlgGPbsmk1/iOrv78elS5ecXsYWmqbhvffeQygUcnop
+      FQ0ODjq9hJeKRCLYu3evLbe141eClVJIpVIIdgSwsPgU0Ui4IV4JBp4/537t2jXcu3fP8acw
+      XS4Xzp49i+Hh4YZ9P5BSCl9//TW++OILlEqN9SnFPT09ePfdd7Fv3z5bbm/nAZhFTM0swO8G
+      XKoMX28/2l0mzC0fo/hyG08SKPzQOO89aQTeaC883V2O3Pba2hpWVlYcue1KDMNAOBy29cCx
+      8xMt08Ry4gm693dhNb2GI1Ft87x5p48Ac/++itl//GtXC21VA3+/jNhfnTmFCwaDCAaDjtx2
+      o9hxAJrhxfnz57f8GV8wpWbX9BfBRNVgACQaAyDRGACJxgBINAZAojEAEo0BkGgMgERjACQa
+      AyDRGACJxgBINAZAojEAEs1yAAuzD3H39m3kyvVYDpG9LI/ed3f3YH7uMYplBS9MS1+UV+0n
+      N7Qi0zQbbi5XEssBKA2IDfwGHR4NSlkbiZTwOTlW6bpu20eA0C9Zvuc9vgAivYF6rIXIdjwk
+      k2gMgERjACQaAyDRGACJxgBINAZAojEAEo0BkGgMgERjACQaAyDRGACJxgBINMsBJOZncHPk
+      JifCqCVYn8TQXfAaQLGk4DU4EVYtToQ5y3IA+7t7kCvp2OvVAE6EVY0TYc6yvEfqbi9eORhF
+      Y34DLpE1PCSTaAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQaAyARGMAJBoDINEYAInGAEg0
+      ywGspZ/h2ldfIc8ZDmoBlicx9uwNIXbwIHwuBdPkRFi16jkRpm7+E3jweV223ay0c38DBv+8
+      +bP1USRVQndPHzRN25zw4kTY7tVzIqysa+AhZytd16G/cH9bvuc13Q2ft6ZrInIMD8kkGgMg
+      0RgAicYASDQGQKIxABKNAZBoDIBEYwAkGgMg0RgAicYASDQGQKJVDGAyPgmlFOLxuN3rIbJV
+      xQB+2vErBZBLJTE++ZDvM6eWUHEeoLOzE9evX0c2l8X843nEorHN3y2vpOAq5pBZLyPgBifC
+      qlTXiTBzZ/8vkpimCfOF+7tiAOfPnd92A329YUw9WkCbxwVde34HcyJs9zgRZq+fT4Rtu0fG
+      J27g6n/+h/Wf/bnbF8CR1w7Dw32ZWsC2u7GmGVgvbcBt52qIbLZtAMXcBvZ1hfgQSi1t2wB0
+      jxfZ1DMGQC1t2wD8fj98gcAuPjeFqHlsG8APiSVsZFZRsHM1RDbbNoC+2EGUy0VeBFNL2zaA
+      bPoZ3G4finauhshmFQPIpZ8iHp/A7QeP+AhALa3iNa6/oxOnzvwBgcB3dq+HyFYVHwGUKuPp
+      4jwy+TKfBqWWts01QAmJ5RSCfi/4NQDUyioGMD92F+19HYgvZtBm94qIbFQxgO5XD2OPHsCZ
+      kwM8BaKWVvEi2BcI4vjxoN1rIbKd5Tc1p5/M4u6Dh7w2oJZg/RtifH6U56aQ3ehHwMXvCKsW
+      J8LstaOJsJfZEwigs+8AOjwalOJ3hFWLE2H22vFE2HZcnjYcOhCp6aKInMJDMonGAEg0BkCi
+      MQASjQGQaAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQaAyARLMcgFIKd+7cqcdaiGxneRJj
+      ceYBFpdXcLhQgtfQOBFWJU6E2avqibC+/iPw7+uF32ts7vicCNs9ToTZq+qJMAAIBvmJEdQa
+      eEgm0RgAicYASDQGQKIxABKNAZBoDIBEYwAkGgMg0RgAicYASDQGQKIxABKNAZBolgPIZVK4
+      f3cM63yjObUAy5MYbXv8MMtFKFPB1PgdYdXiRJi9qp4Iy65m4PEH4NI16Bq/I6xanAiz188n
+      wizf84FgJ44EOwEAOzzwEzUsHpJJNAZAojEAEo0BkGgMgERjACQaAyDRGACJxgBINAZAojEA
+      Eo0BkGgMgERjACSa5QDyaymM3xtDvlyP5RDZy/I8gMftxZ7gPnh09Xy6hhNhVeFEmL2qnghb
+      zayisJ5DqazB4+JEWLU4EWavqifCQl09CHX1AOBEGDU/HpJJNAZAojEAEo0BkGgMgERjACQa
+      AyDRGACJ9n/7apY1LaFycAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='119' name='Sheet 2' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='139' name='Sheet 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAACLCAYAAAA3Q5aoAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAEoklEQVR4nO3bYUjcZQDH8d92BVcTVqSLogUucupoOY4luCEL34Q1AiUIib3Idlgy2pvR
+      q1BfLNkgyA3bFDah5gYxWHRBNBBGi6jpyQYq0vAI04uRExezdMd5vdhezKbJdrc7ud/38/Lv
+      w/M893Bf/nfe3ZpUKpUSYGptrjcA5BIBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwNojKw0YGBjIxj6AnFiTSqVSud4EkCu8BII1AoA1AoA1AoA1AoC1tAKIR7oViae/ifua
+      Jx5Rd2YWzcw8aW0hB+eXRzLxuLkDwNoDfg4QV6S1Td/+cdelUFhd4ZCSf17SF8d61T85p7Xr
+      XtSrTU2qLymQkhPq6+zUueFpJQJBFW5r0IG9G3VxmXmWXDXSqrbFgxXuCiukm/o1clI93w9r
+      eiGowpff0v73dqookNREX6c6zw1rOhFQsHCbGg7s1caLy82TLbk5v/yRufNL64OweKRb0VBY
+      u5+9c2GmT4c/+kpji0Y9ozdaWrX7ycs60dKjWFGZyksrVFW9XcXrA0vP8/+LqjsaUviuwSNf
+      7lfHj/8sHhcKqytcrssnWtQTK1JZeakqqqq1vXi9AsvMk205Ob88konzW/GrEPdlfl7zFY36
+      /P1Xbj/JFqlQY/shTY5e0VhsRGcO9mtX2z5VPZb+srduPaHajz/Tm8/d+7eKxnYdmhzVlbGY
+      Rs4cVP+uNu3LxKIPQ47OL288wPml+R7gmmJXbygpKZFISE+Xq/z3r3VqcFoJSUrOaWr4kkZm
+      JMWHNDiZ1IYtlaqurdNrpdLMX8vMs9Kqsau6cXuwEpI2lz2lH05/p9hcUpKUmB3Xz9HfJMU1
+      NDip5IYtqqyuVd3iRe+ZJ/tyc375I/3zS++7QPELOnL0rIanFxTc0aSOPVuVnOhT57FvNDo1
+      p+Sj6/T8S6/r7T01euHvqHqO9yo6PqtEIKhNNc1qri9RwTLzXD/frk+m6vRpw+b/LqoLR47q
+      7PC0FoI71NSxR1t1U0OnO3Typ3HNJgIKFharsu5dNYSkaM9x9UbvXN9Uo+bmepUULDdPli3x
+      uDN1fhbi6Z/fKv0y3HWdP3xKj3/woXYW5HovyGer89+g8V90LfQOT348dKv0DgBkx+q8AwBZ
+      QgCwxk8iYY33ALDGSyBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      +xcy6EItnLuGiAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
